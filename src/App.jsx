@@ -17,7 +17,7 @@ const App = () => {
 
 
 
-  let printUserData = "No User Available"
+  let printUserData = <h1 className='text-bold'>No Data Available</h1>
 
   if (userdata.length > 0) {
     printUserData = userdata.map(function (elem, idx) {
@@ -34,11 +34,7 @@ const App = () => {
 
   return (
     <div className='bg-black h-screen p-4 overflow-auto text-white'>
-      <button
-        onClick={() => {
-          getData()
-        }}
-        className='bg-green-600  active:scale-95  text-white px-3 py-4 rounded'>Get Data</button>
+      
       <div className='flex flex-wrap justify-between mt-10 gap-2 space-y-3'>
         {
           printUserData
